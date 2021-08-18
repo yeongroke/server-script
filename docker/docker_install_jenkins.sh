@@ -10,6 +10,9 @@ docker run -d --restart unless-stopped --name jenkins-master  \
   -p 8080:8080 -p 50000:50000 \
   jenkins/jenkins:lts
 
-sudo firewall-cmd --permanent --zone=public --add-port=8080/tcp
-sudo firewall-cmd --permanent --zone=public --add-port=50000/tcp
-sudo firewall-cmd --reload
+#sudo firewall-cmd --permanent --zone=public --add-port=8080/tcp
+#sudo firewall-cmd --permanent --zone=public --add-port=50000/tcp
+#sudo firewall-cmd --reload
+
+#docker container exec -it jenkins-master ssh-keygen -t rsa
+#docker container exec -it jenkins-master cat /var/jenkins_home/.ssh/id_rsa.pub
