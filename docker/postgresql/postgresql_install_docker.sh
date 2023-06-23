@@ -18,3 +18,5 @@ docker run -d --restart unless-stopped --name postgresql -p 5432:5432 \
   -c max_connections=2096 \
   -c wal_buffers=512MB \
   -c effective_cache_size=20480MB
+
+docker run -d --restart unless-stopped -e TZ=Asia/Seoul -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=test1234 -v /docker_data/postgresql/data:/var/lib/postgresql/data -v /docker_data/postgresql/config:/etc/postgresql/config postgres
